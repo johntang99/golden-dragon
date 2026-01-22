@@ -80,7 +80,7 @@ export default function AboutPage() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[var(--primary)]/20 to-[var(--secondary)]/20 blur-2xl rounded-3xl"></div>
               <div className="relative h-[600px] rounded-3xl overflow-hidden border-4 border-[var(--secondary)]/50 shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
+                  src="/chinese-chef-fine-dining.png"
                   alt="Master Chef Chen Wei"
                   fill
                   className="object-cover"
