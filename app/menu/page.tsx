@@ -47,7 +47,7 @@ const dishPhotos: { [key: string]: string } = {
   'crispy-whole-fish': 'https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80',
   
   // Vegetarian
-  'buddha-delight': 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80',
+  'vegetable-delight': 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80',
   'vegetable-dumplings': 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80',
   
   // Desserts
@@ -82,12 +82,14 @@ export default function MenuPage() {
           <span className="inline-block px-6 py-3 bg-gradient-to-r from-[var(--secondary)] to-[var(--secondary-light)] text-white rounded-full text-small font-bold mb-8 shadow-2xl border-2 border-[var(--secondary-light)]">
             OUR MENU
           </span>
-          <h1 className="text-display md:text-[5rem] mb-6 font-serif">Authentic Chinese Cuisine</h1>
-          <p className="text-subheading text-white/95 mb-4">
-            Fresh ingredients, traditional recipes, and authentic flavors
+          <h1 className="text-display md:text-[5rem] mb-6 font-serif">
+            "Where Tradition Meets Excellence"
+          </h1>
+          <p className="text-heading text-[var(--secondary)] mb-4 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+            传统与卓越的完美结合
           </p>
-          <p className="text-heading text-[var(--secondary)] text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
-            正宗中国菜 • 新鲜食材 • 传统配方
+          <p className="text-subheading text-white/90">
+            Fresh ingredients, traditional recipes, and authentic flavors
           </p>
         </div>
 
@@ -138,7 +140,7 @@ export default function MenuPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-[var(--secondary)] to-[var(--secondary-light)] text-white px-4 py-2 rounded-full font-bold shadow-xl">
                     ${dish.price.toFixed(2)}
@@ -208,10 +210,10 @@ export default function MenuPage() {
                           src={dishPhotos[item.slug] || 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80'}
                           alt={item.name}
                           fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500 brightness-105"
                           sizes="280px"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10"></div>
                       </div>
 
                       {/* Content - Right */}

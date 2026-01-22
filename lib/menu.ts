@@ -301,9 +301,9 @@ export const menuItems: MenuItem[] = [
   // ========================================
   {
     id: '60',
-    slug: 'buddha-delight',
-    name: "Buddha's Delight",
-    nameLocal: '罗汉斋',
+    slug: 'vegetable-delight',
+    name: "Vegetable Delight",
+    nameLocal: '素菜王',
     category: 'Vegetarian',
     description: 'Mixed vegetables and tofu in light sauce',
     price: 11.95,
