@@ -1,26 +1,195 @@
 @import "tailwindcss";
 
+/* ===============================================
+   🥢 GOLDEN DRAGON - CHINESE RESTAURANT THEME
+   ===============================================
+   Red & Gold - Traditional Lucky Colors
+   =============================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ========================================
+     PRIMARY COLORS (Lucky Red)
+     ======================================== */
+  --primary: #DC2626;           /* Red-600 - Lucky red */
+  --primary-dark: #B91C1C;      /* Red-700 - Deep red */
+  --primary-light: #EF4444;     /* Red-500 - Bright red */
+  --primary-50: #FEF2F2;        /* Red-50 - Soft red */
+  --primary-100: #FEE2E2;       /* Red-100 - Light red */
+
+  /* ========================================
+     SECONDARY COLORS (Fortune Gold)
+     ======================================== */
+  --secondary: #F59E0B;         /* Amber-500 - Gold */
+  --secondary-dark: #D97706;    /* Amber-600 - Deep gold */
+  --secondary-light: #FBBF24;   /* Amber-400 - Bright gold */
+  --secondary-50: #FFFBEB;      /* Amber-50 - Soft gold */
+  --secondary-100: #FEF3C7;     /* Amber-100 - Light gold */
+
+  /* ========================================
+     ACCENT COLORS
+     ======================================== */
+  --accent: #1F2937;            /* Gray-800 - Elegant dark */
+  --accent-light: #374151;      /* Gray-700 */
+
+  /* ========================================
+     BACKDROP/BACKGROUND COLORS
+     ======================================== */
+  --backdrop-primary: #FEF2F2;     /* Soft red */
+  --backdrop-secondary: #FFFBEB;   /* Soft gold */
+  --backdrop-gradient-start: var(--backdrop-primary);
+  --backdrop-gradient-middle: var(--backdrop-secondary);
+  --backdrop-gradient-end: var(--backdrop-primary);
+
+  /* ========================================
+     TOP BAR (Header contact bar)
+     ======================================== */
+  --topbar-bg: var(--primary);
+  --topbar-text: #ffffff;
+  --topbar-hover: var(--primary-light);
+
+  /* ========================================
+     HERO SECTION
+     ======================================== */
+  --hero-bg-start: var(--backdrop-primary);
+  --hero-bg-middle: var(--backdrop-secondary);
+  --hero-bg-end: var(--backdrop-primary);
+
+  /* ========================================
+     CTA BUTTONS
+     ======================================== */
+  --cta-primary-bg: var(--primary);
+  --cta-primary-hover: var(--primary-dark);
+  --cta-primary-text: #ffffff;
+  
+  --cta-secondary-bg: var(--secondary);
+  --cta-secondary-hover: var(--secondary-dark);
+  --cta-secondary-text: #ffffff;
+
+  /* ========================================
+     STATS BAR
+     ======================================== */
+  --stats-bg-start: var(--primary);
+  --stats-bg-end: var(--primary-dark);
+  --stats-text: #ffffff;
+
+  /* ========================================
+     CORE SURFACES
+     ======================================== */
+  --bg: #FFFEF9;                /* Warm paper base */
+  --surface: #ffffff;
+  --surface-2: #f6f7f7;
+  
+  /* ========================================
+     TEXT COLORS
+     ======================================== */
+  --text: #0f172a;              /* slate-900 */
+  --text-muted: #475569;        /* slate-600 */
+  --text-light: #64748b;        /* slate-500 */
+  
+  /* ========================================
+     BORDERS & DIVIDERS
+     ======================================== */
+  --border: rgba(15, 23, 42, 0.08);
+  --border-light: rgba(15, 23, 42, 0.05);
+
+  /* ========================================
+     SHADOWS & EFFECTS
+     ======================================== */
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
+
+  /* ========================================
+     TYPOGRAPHY - Simplified 5-Size System
+     ======================================== */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: 'Noto Serif', Georgia, serif;
+  --font-chinese: 'Noto Sans SC', sans-serif;
+  
+  --text-display: 3rem;        /* 48px - Hero titles */
+  --text-heading: 2.25rem;     /* 36px - Section titles */
+  --text-subheading: 1.25rem;  /* 20px - Card titles */
+  --text-body: 1rem;           /* 16px - Regular text */
+  --text-small: 0.875rem;      /* 14px - Meta info */
+  
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+
+  /* ========================================
+     LEGACY SUPPORT
+     ======================================== */
+  --brand: var(--primary);
+  --brand-2: var(--primary-dark);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(900px 500px at 15% 0%, rgba(220, 38, 38, 0.06), transparent 55%),
+    radial-gradient(900px 500px at 85% 10%, rgba(245, 158, 11, 0.05), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(220, 38, 38, 0.18);
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+.text-display {
+  font-size: var(--text-display);
+  line-height: var(--leading-tight);
+  font-weight: var(--weight-bold);
+}
+
+.text-heading {
+  font-size: var(--text-heading);
+  line-height: var(--leading-tight);
+  font-weight: var(--weight-bold);
+}
+
+.text-subheading {
+  font-size: var(--text-subheading);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-semibold);
+}
+
+.text-body {
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--weight-normal);
+}
+
+.text-small {
+  font-size: var(--text-small);
+  line-height: var(--leading-normal);
+  font-weight: var(--weight-normal);
+}
+
+/* Chinese text styling */
+.text-chinese {
+  font-family: var(--font-chinese);
+  font-weight: var(--weight-medium);
 }
