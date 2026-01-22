@@ -7,13 +7,28 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
+  // All 20 gallery photos from homepage
   const photos = [
-    { src: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=80', alt: 'Chinese food spread' },
-    { src: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80', alt: 'Dim sum' },
-    { src: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80', alt: 'Dumplings' },
+    { src: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=800&q=80', alt: 'Dumplings in bamboo steamer' },
+    { src: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80', alt: 'Dim sum selection' },
+    { src: 'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=800&q=80', alt: 'Spring rolls' },
     { src: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=800&q=80', alt: 'Noodles' },
-    { src: 'https://images.unsplash.com/photo-1596040033229-a0b3b1fea2b8?w=800&q=80', alt: 'Stir fry' },
-    { src: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80', alt: 'Chinese restaurant' },
+    { src: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=80', alt: 'Chinese feast' },
+    { src: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80', alt: 'Fried rice' },
+    { src: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80', alt: 'Restaurant interior' },
+    { src: 'https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=800&q=80', alt: 'Chinese dishes' },
+    { src: 'https://images.unsplash.com/photo-1612927601601-6638404737ce?w=800&q=80', alt: 'Soup' },
+    { src: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80', alt: 'Stir fry vegetables' },
+    { src: 'https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=800&q=80', alt: 'Chinese cuisine' },
+    { src: 'https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=800&q=80', alt: 'Asian food' },
+    { src: 'https://images.unsplash.com/photo-1596040033229-a0b3b1fea2b8?w=800&q=80', alt: 'Stir fry dish' },
+    { src: 'https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=800&q=80', alt: 'Mapo tofu' },
+    { src: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&q=80', alt: 'Vegetable dish' },
+    { src: 'https://images.unsplash.com/photo-1626804475297-41608ea09aeb?w=800&q=80', alt: 'Chinese appetizer' },
+    { src: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=800&q=80', alt: 'Pot stickers' },
+    { src: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80', alt: 'Egg drop soup' },
+    { src: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80', alt: 'Dessert' },
+    { src: 'https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=800&q=80', alt: 'Chinese tea' },
   ];
 
   return (
