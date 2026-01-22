@@ -10,19 +10,89 @@ import { Clock, User, BookOpen, Play } from 'lucide-react';
 export default function FoodStoriesPage() {
   const [activeCategory, setActiveCategory] = useState('All');
   
-  const filteredStories = getStoriesByCategory(activeCategory);
+  // Featured story (first one)
+  const featuredStory = foodStories[0];
+  
+  // Rest of stories (excluding featured)
+  const allStories = getStoriesByCategory(activeCategory);
+  const filteredStories = activeCategory === 'All' 
+    ? allStories.slice(1) 
+    : allStories.filter(s => s.id !== featuredStory.id);
 
   return (
     <main>
-      {/* Hero */}
-      <section className="py-24 px-4 bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)]">
+      {/* Featured Article Hero */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <div className="bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)] rounded-3xl overflow-hidden border-4 border-[var(--secondary)]/30 shadow-2xl">
+            <div className="grid lg:grid-cols-2">
+              {/* Featured Image */}
+              <div className="relative aspect-[16/10] lg:aspect-auto lg:h-full">
+                <Image
+                  src={featuredStory.image}
+                  alt={featuredStory.title}
+                  fill
+                  className="object-cover"
+                  sizes="50vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                
+                {/* Featured badge */}
+                <div className="absolute top-6 left-6">
+                  <span className="px-6 py-3 bg-gradient-to-r from-[var(--secondary)] to-[var(--secondary-light)] text-white rounded-full text-small font-bold shadow-xl flex items-center gap-2">
+                    ⭐ FEATURED STORY
+                  </span>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8 md:p-12 flex flex-col justify-center">
+                <div className="inline-block mb-4">
+                  <span className="px-4 py-2 bg-white rounded-full text-small font-bold text-[var(--primary)] border-2 border-[var(--secondary)]/50">
+                    {featuredStory.category}
+                  </span>
+                </div>
+                
+                <h1 className="text-heading md:text-display mb-4 font-serif leading-tight">
+                  {featuredStory.title}
+                </h1>
+                <p className="text-subheading text-[var(--secondary)] font-bold mb-6 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+                  {featuredStory.titleChinese}
+                </p>
+                
+                <p className="text-body text-gray-700 mb-6 leading-relaxed">
+                  {featuredStory.excerpt}
+                </p>
+
+                <div className="flex items-center gap-4 text-small text-gray-600 mb-8">
+                  <span className="flex items-center gap-2">
+                    <User className="w-4 h-4" />
+                    {featuredStory.author}
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    {featuredStory.readTime}
+                  </span>
+                </div>
+
+                <div>
+                  <span className="inline-flex items-center gap-2 bg-[var(--primary)] text-white px-8 py-4 rounded-lg hover:bg-[var(--primary-dark)] font-semibold transition-all shadow-lg cursor-pointer">
+                    Read Full Story →
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Title */}
+      <section className="py-12 px-4 bg-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="text-8xl mb-6">📚</div>
-          <h1 className="text-display mb-6 font-serif">Food Stories</h1>
-          <p className="text-heading text-[var(--secondary)] mb-6 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
-            美食故事
-          </p>
-          <p className="text-subheading text-gray-600 max-w-3xl mx-auto">
+          <div className="text-6xl mb-4">📚</div>
+          <h2 className="text-heading mb-4 font-serif">All Food Stories</h2>
+          <p className="text-body text-gray-600">
             Explore the rich history, culture, and secrets behind authentic Chinese cuisine
           </p>
         </div>
@@ -58,7 +128,7 @@ export default function FoodStoriesPage() {
                 key={story.id}
                 className="bg-white rounded-2xl overflow-hidden border-2 border-gray-200 hover:border-[var(--primary)] hover:shadow-xl transition-all group"
               >
-                {/* Image */}
+                {/* Image/Video Thumbnail */}
                 <div className="aspect-[16/10] relative overflow-hidden">
                   <Image
                     src={story.image}
@@ -68,6 +138,15 @@ export default function FoodStoriesPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  
+                  {/* Video Play Button Overlay */}
+                  {story.type === 'video' && (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-[var(--primary)] hover:bg-[var(--primary-dark)] flex items-center justify-center shadow-2xl transition-all group-hover:scale-110">
+                        <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                      </div>
+                    </div>
+                  )}
                   
                   {/* Type badge */}
                   <div className="absolute top-4 left-4">
