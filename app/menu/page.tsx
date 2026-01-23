@@ -1,11 +1,10 @@
-import Image from 'next/image';
-import { menuItems, categories, getMenuByCategory, getChefSpecials } from '@/lib/menu';
-import type { Metadata } from 'next';
+"use client";
 
-export const metadata: Metadata = {
-  title: 'Menu | Golden Dragon Restaurant',
-  description: 'Explore our authentic Chinese menu featuring dim sum, noodles, chef specials, and more. Fresh ingredients and traditional recipes.',
-};
+import Image from 'next/image';
+import Link from 'next/link';
+import { menuItems, categories, getMenuByCategory, getChefSpecials } from '@/lib/menu';
+import { weeklySpecials, getTodaysSpecial } from '@/lib/specials';
+import { siteConfig } from '@/lib/site';
 
 // Photo mapping for menu items
 const dishPhotos: { [key: string]: string } = {
@@ -63,6 +62,8 @@ const dishPhotos: { [key: string]: string } = {
 export default function MenuPage() {
   const chefSpecials = getChefSpecials();
   const regularCategories = categories.filter(cat => cat.name !== "Chef's Specials");
+  const todaysSpecial = getTodaysSpecial();
+  const todayDayNumber = new Date().getDay();
 
   return (
     <main>
@@ -101,6 +102,156 @@ export default function MenuPage() {
               fill="white"
             />
           </svg>
+        </div>
+      </section>
+
+      {/* Today's Special */}
+      <section className="py-20 px-4 bg-gradient-to-b from-[var(--backdrop-primary)] to-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--primary)] text-white font-bold">
+                ⭐
+              </span>
+              <div>
+                <h2 className="text-heading font-serif text-[var(--primary)]">Today&apos;s Special</h2>
+                <p className="text-body text-[var(--secondary)] text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+                  今日推荐
+                </p>
+              </div>
+            </div>
+            <p className="text-body text-gray-600 font-semibold">Available today • Limited quantity</p>
+          </div>
+
+          <div className="bg-white rounded-3xl overflow-hidden border-2 border-[var(--secondary)]/20 shadow-2xl">
+            <div className="grid md:grid-cols-[1.1fr_1fr] gap-0">
+              <div className="relative aspect-[16/10] md:aspect-auto md:h-full">
+                <Image
+                  src={todaysSpecial.image}
+                  alt={todaysSpecial.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-8 md:p-10">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {(todaysSpecial.badges || []).map((badge) => (
+                    <span
+                      key={badge}
+                      className="px-3 py-1 rounded-full bg-[var(--secondary-50)] text-[var(--secondary)] text-small font-semibold"
+                    >
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+                <h3 className="text-heading font-bold text-gray-900 mb-2">{todaysSpecial.name}</h3>
+                <p className="text-body text-[var(--secondary)] font-semibold mb-3 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+                  {todaysSpecial.nameLocal}
+                </p>
+                <p className="text-body text-gray-700 mb-5">{todaysSpecial.description}</p>
+                <div className="mb-6">
+                  <p className="text-small font-bold text-gray-600 mb-2">Comes with</p>
+                  <ul className="space-y-2 text-body text-gray-700">
+                    {todaysSpecial.includes.slice(0, 3).map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[var(--primary)]"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="text-[2rem] font-black text-[var(--primary)] mb-6">
+                  ${todaysSpecial.price.toFixed(2)}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/order"
+                    className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold text-body text-center hover:bg-[var(--primary-dark)] transition-all"
+                  >
+                    Order Now
+                  </Link>
+                  <Link
+                    href={`tel:${siteConfig.contact.phone.raw}`}
+                    className="border-2 border-[var(--secondary)] text-[var(--secondary)] px-6 py-3 rounded-lg font-bold text-body text-center hover:bg-[var(--secondary)] hover:text-white transition-all"
+                  >
+                    Call Now
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Weekly Specials */}
+      <section id="weekly-specials" className="py-16 px-4 bg-white scroll-mt-[140px]">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-heading font-serif mb-2">Weekly Specials</h2>
+            <p className="text-body text-gray-600">Chef’s rotating favorites, crafted daily.</p>
+          </div>
+
+          <div className="weekly-scroll-container">
+            <div
+              className="weekly-scroll-track"
+              onMouseEnter={(e) => (e.currentTarget.style.animationPlayState = 'paused')}
+              onMouseLeave={(e) => (e.currentTarget.style.animationPlayState = 'running')}
+            >
+              {Array(2).fill(weeklySpecials).flat().map((special, index) => {
+                const isToday = special.dayNumber === todayDayNumber;
+                return (
+                  <div
+                    key={`${special.day}-${index}`}
+                    className={`w-72 flex-shrink-0 bg-white rounded-2xl overflow-hidden border-2 shadow-lg transition-all ${
+                      isToday ? 'border-[var(--secondary)]/60 shadow-xl' : 'border-[var(--secondary)]/20 hover:border-[var(--secondary)]/50'
+                    }`}
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={special.image}
+                        alt={special.name}
+                        fill
+                        className="object-cover"
+                        sizes="320px"
+                      />
+                      <div className="absolute top-3 left-3 bg-white/90 text-gray-700 px-3 py-1 rounded-full text-small font-bold">
+                        {special.dayShort}
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="text-subheading font-bold text-gray-900">{special.name}</h3>
+                        <span className="text-small font-bold text-[var(--primary)]">${special.price.toFixed(2)}</span>
+                      </div>
+                      <p className="text-body text-[var(--secondary)] font-semibold mb-2 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+                        {special.nameLocal}
+                      </p>
+                      <p className="text-small text-gray-600 line-clamp-2 mb-3">{special.description}</p>
+                      {special.badges && special.badges.length > 0 && (
+                        <div className="flex flex-wrap gap-1 mb-4">
+                        {special.badges.map((badge: string, idx: number) => (
+                            <span
+                              key={idx}
+                              className="px-2 py-0.5 rounded-full bg-[var(--secondary-50)] text-[var(--secondary)] text-[0.7rem] font-semibold"
+                            >
+                              {badge}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <Link
+                        href="/order"
+                        className="inline-flex items-center justify-center w-full px-4 py-2.5 rounded-lg border-2 border-[var(--primary)] text-[var(--primary)] font-bold text-small hover:bg-[var(--primary)] hover:text-white transition-all"
+                      >
+                        Order
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -292,6 +443,23 @@ export default function MenuPage() {
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        .weekly-scroll-container {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+        }
+        .weekly-scroll-track {
+          display: flex;
+          gap: 1rem;
+          animation: weeklyScroll 40s linear infinite;
+        }
+        @keyframes weeklyScroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </main>
   );
 }

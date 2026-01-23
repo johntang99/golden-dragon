@@ -6,11 +6,16 @@ import Image from 'next/image';
 import { Star, ArrowRight, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import { siteConfig } from '@/lib/site';
 import { menuItems, getChefSpecials, categories } from '@/lib/menu';
+import { weeklySpecials } from '@/lib/specials';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [dishesVisible, setDishesVisible] = useState(false);
+  const [activeSpecialDay, setActiveSpecialDay] = useState(() => new Date().getDay());
   const dishesRef = useRef<HTMLDivElement>(null);
+  const todayDayNumber = new Date().getDay();
+  const activeSpecial = weeklySpecials.find((special) => special.dayNumber === activeSpecialDay) || weeklySpecials[1];
+  const isToday = activeSpecialDay === todayDayNumber;
 
   // Intersection Observer for scroll-triggered animation
   useEffect(() => {
@@ -282,6 +287,112 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Today's Special - Weekly Carousel */}
+      <section className="py-20 px-4 bg-gradient-to-b from-[var(--backdrop-primary)] to-white relative">
+        <div className="absolute top-12 right-10 text-[8rem] opacity-5">🥢</div>
+        <div className="container mx-auto max-w-6xl relative">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[var(--primary)] text-white font-bold">
+                ⭐
+              </span>
+              <div>
+                <h2 className="text-heading font-serif text-[var(--primary)]">
+                  {isToday ? "Today's Special" : `${activeSpecial.day}'s Special`}
+                </h2>
+                <p className="text-body text-[var(--secondary)] text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+                  今日推荐
+                </p>
+              </div>
+            </div>
+            <p className="text-body text-gray-600 font-semibold">
+              {isToday ? 'Available today • Limited quantity' : `Viewing ${activeSpecial.day} • Limited quantity`}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 mb-8">
+            {weeklySpecials.map((special) => (
+              <button
+                key={special.day}
+                onClick={() => setActiveSpecialDay(special.dayNumber)}
+                className={`px-5 py-2.5 rounded-full font-bold text-body transition-all border-2 ${
+                  activeSpecialDay === special.dayNumber
+                    ? 'bg-white text-[var(--primary)] border-[var(--secondary)] shadow-md'
+                    : 'bg-white/70 text-gray-600 border-gray-200 hover:border-[var(--secondary)] hover:text-[var(--primary)]'
+                }`}
+              >
+                {special.day}
+              </button>
+            ))}
+          </div>
+
+          <div className="bg-white rounded-3xl overflow-hidden border-2 border-[var(--secondary)]/20 shadow-2xl">
+            <div className="grid md:grid-cols-[1.1fr_1fr] gap-0">
+              <div className="relative aspect-[16/10] md:aspect-auto md:h-full">
+                <Image
+                  src={activeSpecial.image}
+                  alt={activeSpecial.name}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-8 md:p-10 flex flex-col justify-center">
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {activeSpecial.badges?.map((badge) => (
+                    <span
+                      key={badge}
+                      className="px-3 py-1 rounded-full bg-[var(--secondary)]/10 text-[var(--primary)] text-small font-semibold"
+                    >
+                      {badge}
+                    </span>
+                  ))}
+                </div>
+                <h3 className="text-subheading font-bold text-gray-900 mb-2">
+                  {activeSpecial.name}
+                </h3>
+                <p className="text-body text-[var(--secondary)] font-semibold mb-3 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
+                  {activeSpecial.nameLocal}
+                </p>
+                <p className="text-body text-gray-700 mb-4">
+                  {activeSpecial.description}
+                </p>
+                <div className="mb-6">
+                  <p className="text-small font-bold text-gray-600 mb-2">Comes with</p>
+                  <ul className="space-y-2 text-body text-gray-700">
+                    {activeSpecial.includes.map((item) => (
+                      <li key={item} className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[var(--primary)]"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex items-center justify-between flex-wrap gap-4 mb-6">
+                  <div className="text-[2rem] font-black text-[var(--primary)]">
+                    ${activeSpecial.price.toFixed(2)}
+                  </div>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Link
+                    href="/order"
+                    className="bg-[var(--primary)] text-white px-6 py-3 rounded-lg font-bold text-body text-center hover:bg-[var(--primary-dark)] transition-all"
+                  >
+                    Order Now
+                  </Link>
+                  <a
+                    href={siteConfig.contact.phone.href}
+                    className="border-2 border-[var(--secondary)] text-[var(--secondary)] px-6 py-3 rounded-lg font-bold text-body text-center hover:bg-[var(--secondary)] hover:text-white transition-all"
+                  >
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

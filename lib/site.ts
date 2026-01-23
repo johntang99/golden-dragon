@@ -76,6 +76,7 @@ export const siteConfig = {
     main: [
       { name: 'Home', href: '/' },
       { name: 'Menu', href: '/menu' },
+      { name: 'Specials', href: '/menu#weekly-specials' },
       { name: 'About', href: '/about' },
       { name: 'Food Stories', href: '/food-stories' },
       { name: 'Gallery', href: '/gallery' },
