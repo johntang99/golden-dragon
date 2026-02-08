@@ -1,0 +1,123 @@
+{
+  "brand": {
+    "name": "Golden Dragon",
+    "tagline": "正宗中餐",
+    "description": "用新鲜食材与传承配方呈现地道中式风味，欢迎光临。"
+  },
+  "contact": {
+    "phone": {
+      "display": "(555) 888-8888",
+      "raw": "+15558888888",
+      "href": "tel:+15558888888"
+    },
+    "email": {
+      "display": "info@goldendragon.com",
+      "href": "mailto:info@goldendragon.com"
+    },
+    "address": {
+      "street": "88 Dragon Street",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10002",
+      "country": "United States",
+      "full": "88 Dragon Street, New York, NY 10002",
+      "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2690709187183!2d-73.99188!3d40.71455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1"
+    },
+    "hours": {
+      "monday": { "open": "11:00 AM", "close": "10:00 PM" },
+      "tuesday": { "open": "11:00 AM", "close": "10:00 PM" },
+      "wednesday": { "open": "11:00 AM", "close": "10:00 PM" },
+      "thursday": { "open": "11:00 AM", "close": "10:00 PM" },
+      "friday": { "open": "11:00 AM", "close": "11:00 PM" },
+      "saturday": { "open": "11:00 AM", "close": "11:00 PM" },
+      "sunday": { "open": "11:00 AM", "close": "10:00 PM" }
+    },
+    "hoursFormatted": [
+      { "days": "Monday - Thursday", "hours": "11:00 AM - 10:00 PM" },
+      { "days": "Friday - Saturday", "hours": "11:00 AM - 11:00 PM" },
+      { "days": "Sunday", "hours": "11:00 AM - 10:00 PM" }
+    ]
+  },
+  "schema": {
+    "businessType": "Restaurant",
+    "url": "https://goldendragon.com",
+    "servesCuisine": "Chinese",
+    "priceRange": "$$"
+  },
+  "seo": {
+    "defaultTitle": "Golden Dragon | 正宗中餐 | 纽约",
+    "titleTemplate": "%s | Golden Dragon",
+    "defaultDescription": "在纽约品尝地道中餐：新鲜食材、传统配方与热情服务。提供堂食、外卖与宴会服务。",
+    "keywords": [
+      "纽约中餐馆",
+      "正宗中餐",
+      "点心",
+      "中餐外卖",
+      "北京烤鸭",
+      "川菜",
+      "中餐配送",
+      "家庭餐厅"
+    ]
+  },
+  "navigation": {
+    "main": [
+      { "name": "首页", "href": "/" },
+      { "name": "菜单", "href": "/menu" },
+      { "name": "今日推荐", "href": "/menu#weekly-specials" },
+      { "name": "关于我们", "href": "/about" },
+      { "name": "美食故事", "href": "/food-stories" },
+      { "name": "相册", "href": "/gallery" },
+      { "name": "宴会/外烩", "href": "/catering" },
+      { "name": "评价", "href": "/reviews" },
+      { "name": "联系我们", "href": "/contact" }
+    ],
+    "footer": {
+      "menu": [
+        { "name": "点心", "href": "/menu#dim-sum" },
+        { "name": "面条", "href": "/menu#noodles" },
+        { "name": "招牌菜", "href": "/menu#specials" },
+        { "name": "茶品", "href": "/menu#tea" }
+      ],
+      "quickLinks": [
+        { "name": "在线下单", "href": "/order" },
+        { "name": "预约订位", "href": "/reservations" },
+        { "name": "宴会/外烩", "href": "/catering" },
+        { "name": "礼品卡", "href": "/gift-cards" }
+      ]
+    }
+  },
+  "cta": {
+    "primary": { "text": "在线下单", "href": "/order" },
+    "secondary": { "text": "预约订位", "href": "/reservations" }
+  },
+  "settings": {
+    "acceptReservations": true,
+    "deliveryAvailable": true,
+    "takeoutAvailable": true,
+    "cateringAvailable": true,
+    "cuisineType": "Chinese",
+    "specialties": [
+      "正宗点心",
+      "北京烤鸭",
+      "手工拉面",
+      "川味特色",
+      "粤式经典",
+      "家传秘方"
+    ],
+    "amenities": [
+      "堂食",
+      "外卖自取",
+      "配送",
+      "宴会/外烩",
+      "包厢",
+      "免费 WiFi",
+      "酒吧",
+      "素食选择"
+    ]
+  },
+  "social": {
+    "yelp": "https://yelp.com/golden-dragon",
+    "instagram": "https://instagram.com/goldendragonnyc",
+    "facebook": "https://facebook.com/goldendragonnyc"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "brand": {
+    "logoText": "GD",
+    "name": "Golden Dragon",
+    "description": "以传统工艺与热情服务呈现正宗中式风味。"
+  },
+  "quickLinks": [
+    { "text": "菜单", "url": "/menu" },
+    { "text": "预约订位", "url": "/reservations" },
+    { "text": "宴会/外烩", "url": "/catering" },
+    { "text": "联系我们", "url": "/contact" }
+  ],
+  "services": [
+    { "text": "点心", "url": "/menu#dim-sum" },
+    { "text": "面条", "url": "/menu#noodles" },
+    { "text": "招牌菜", "url": "/menu#specials" },
+    { "text": "茶品", "url": "/menu#tea" }
+  ],
+  "contact": {
+    "addressLines": ["88 Dragon Street", "New York, NY 10002"],
+    "phone": "(555) 888-8888",
+    "phoneLink": "tel:+15558888888",
+    "email": "info@goldendragon.com",
+    "emailLink": "mailto:info@goldendragon.com"
+  },
+  "hours": [
+    "周一至周四：11:00 AM - 10:00 PM",
+    "周五至周六：11:00 AM - 11:00 PM",
+    "周日：11:00 AM - 10:00 PM"
+  ],
+  "legalLinks": [
+    { "text": "隐私政策", "url": "/privacy" },
+    { "text": "服务条款", "url": "/terms" }
+  ],
+  "copyright": "© {year} Golden Dragon. 版权所有。"
+}

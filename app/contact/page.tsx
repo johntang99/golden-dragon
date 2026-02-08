@@ -1,13 +1,30 @@
-import { siteConfig } from '@/lib/site';
-import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { getLocaleFromAcceptLanguage } from '@/lib/locale';
+import { getSiteIdFromHost } from '@/lib/sites';
+import { getSiteConfig } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'Contact | Golden Dragon Restaurant',
-  description: 'Visit us, call us, or send us a message. We\'re here to serve you authentic Chinese cuisine.',
+export const generateMetadata = async () => {
+  const headerList = await headers();
+  const host = headerList.get('host');
+  const locale = getLocaleFromAcceptLanguage(headerList.get('accept-language'));
+  const siteId = getSiteIdFromHost(host);
+  const siteConfig = getSiteConfig(siteId, locale);
+
+  return {
+    title: `Contact | ${siteConfig.brand.name}`,
+    description:
+      "Visit us, call us, or send us a message. We're here to serve you authentic Chinese cuisine.",
+  };
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const headerList = await headers();
+  const host = headerList.get('host');
+  const locale = getLocaleFromAcceptLanguage(headerList.get('accept-language'));
+  const siteId = getSiteIdFromHost(host);
+  const siteConfig = getSiteConfig(siteId, locale);
+
   return (
     <main>
       {/* Hero */}

@@ -1,0 +1,424 @@
+{
+  "hero": {
+    "title": "Our Menu",
+    "subtitle": "Where Tradition Meets Excellence",
+    "description": "Fresh ingredients, traditional recipes, and authentic flavors.",
+    "backgroundImage": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1600&q=80"
+  },
+  "items": [
+    {
+      "id": "1",
+      "slug": "spring-rolls",
+      "name": "Spring Rolls",
+      "nameLocal": "春卷",
+      "category": "Appetizers",
+      "description": "Crispy vegetable spring rolls served with sweet and sour sauce",
+      "price": 6.95,
+      "vegetarian": true,
+      "popular": true
+    },
+    {
+      "id": "2",
+      "slug": "pot-stickers",
+      "name": "Pork Pot Stickers",
+      "nameLocal": "锅贴",
+      "category": "Appetizers",
+      "description": "Pan-fried dumplings filled with pork and vegetables",
+      "price": 8.95,
+      "popular": true
+    },
+    {
+      "id": "3",
+      "slug": "scallion-pancakes",
+      "name": "Scallion Pancakes",
+      "nameLocal": "葱油饼",
+      "category": "Appetizers",
+      "description": "Flaky, crispy pancakes with fresh scallions",
+      "price": 7.95,
+      "vegetarian": true
+    },
+    {
+      "id": "10",
+      "slug": "xiao-long-bao",
+      "name": "Soup Dumplings (Xiao Long Bao)",
+      "nameLocal": "小笼包",
+      "category": "Dim Sum",
+      "description": "Steamed dumplings filled with pork and flavorful soup",
+      "price": 9.95,
+      "chefSpecial": true,
+      "popular": true
+    },
+    {
+      "id": "11",
+      "slug": "har-gow",
+      "name": "Shrimp Dumplings (Har Gow)",
+      "nameLocal": "虾饺",
+      "category": "Dim Sum",
+      "description": "Translucent steamed dumplings with whole shrimp",
+      "price": 8.95,
+      "popular": true
+    },
+    {
+      "id": "12",
+      "slug": "siu-mai",
+      "name": "Pork Siu Mai",
+      "nameLocal": "烧卖",
+      "category": "Dim Sum",
+      "description": "Open-topped steamed dumplings with pork and shrimp",
+      "price": 8.95
+    },
+    {
+      "id": "13",
+      "slug": "char-siu-bao",
+      "name": "BBQ Pork Buns",
+      "nameLocal": "叉烧包",
+      "category": "Dim Sum",
+      "description": "Fluffy steamed buns filled with sweet BBQ pork",
+      "price": 7.95,
+      "popular": true
+    },
+    {
+      "id": "14",
+      "slug": "turnip-cakes",
+      "name": "Pan-Fried Turnip Cakes",
+      "nameLocal": "萝卜糕",
+      "category": "Dim Sum",
+      "description": "Crispy pan-fried radish cakes with XO sauce",
+      "price": 7.95
+    },
+    {
+      "id": "20",
+      "slug": "hot-sour-soup",
+      "name": "Hot & Sour Soup",
+      "nameLocal": "酸辣汤",
+      "category": "Soup",
+      "description": "Spicy and tangy soup with tofu, mushrooms, and bamboo shoots",
+      "price": 5.95,
+      "spicyLevel": 2,
+      "vegetarian": true
+    },
+    {
+      "id": "21",
+      "slug": "egg-drop-soup",
+      "name": "Egg Drop Soup",
+      "nameLocal": "蛋花汤",
+      "category": "Soup",
+      "description": "Silky chicken broth with ribbons of egg",
+      "price": 4.95
+    },
+    {
+      "id": "22",
+      "slug": "wonton-soup",
+      "name": "Wonton Soup",
+      "nameLocal": "馄饨汤",
+      "category": "Soup",
+      "description": "Pork and shrimp wontons in savory broth",
+      "price": 6.95
+    },
+    {
+      "id": "30",
+      "slug": "dan-dan-noodles",
+      "name": "Dan Dan Noodles",
+      "nameLocal": "担担面",
+      "category": "Noodles",
+      "description": "Spicy Sichuan noodles with minced pork and peanut sauce",
+      "price": 12.95,
+      "spicyLevel": 3,
+      "chefSpecial": true
+    },
+    {
+      "id": "31",
+      "slug": "beef-chow-fun",
+      "name": "Beef Chow Fun",
+      "nameLocal": "干炒牛河",
+      "category": "Noodles",
+      "description": "Stir-fried wide rice noodles with tender beef",
+      "price": 14.95,
+      "popular": true
+    },
+    {
+      "id": "32",
+      "slug": "lo-mein",
+      "name": "Chicken Lo Mein",
+      "nameLocal": "捞面",
+      "category": "Noodles",
+      "description": "Soft noodles stir-fried with chicken and vegetables",
+      "price": 11.95
+    },
+    {
+      "id": "33",
+      "slug": "singapore-noodles",
+      "name": "Singapore Noodles",
+      "nameLocal": "星洲炒米",
+      "category": "Noodles",
+      "description": "Curry-flavored rice noodles with shrimp and BBQ pork",
+      "price": 13.95,
+      "spicyLevel": 1
+    },
+    {
+      "id": "40",
+      "slug": "yangzhou-fried-rice",
+      "name": "Yangzhou Fried Rice",
+      "nameLocal": "扬州炒饭",
+      "category": "Fried Rice",
+      "description": "Classic fried rice with shrimp, BBQ pork, and vegetables",
+      "price": 12.95,
+      "popular": true
+    },
+    {
+      "id": "41",
+      "slug": "chicken-fried-rice",
+      "name": "Chicken Fried Rice",
+      "nameLocal": "鸡炒饭",
+      "category": "Fried Rice",
+      "description": "Wok-fried rice with chicken, egg, and vegetables",
+      "price": 10.95
+    },
+    {
+      "id": "42",
+      "slug": "vegetable-fried-rice",
+      "name": "Vegetable Fried Rice",
+      "nameLocal": "菜炒饭",
+      "category": "Fried Rice",
+      "description": "Healthy fried rice with mixed vegetables",
+      "price": 9.95,
+      "vegetarian": true
+    },
+    {
+      "id": "50",
+      "slug": "peking-duck",
+      "name": "Peking Duck",
+      "nameLocal": "北京烤鸭",
+      "category": "Chef's Specials",
+      "description": "Crispy roasted duck served with pancakes, scallions, and hoisin sauce. Order 24 hours in advance.",
+      "price": 58,
+      "servingSize": "Whole duck, serves 4-6",
+      "chefSpecial": true,
+      "popular": true
+    },
+    {
+      "id": "51",
+      "slug": "kung-pao-chicken",
+      "name": "Kung Pao Chicken",
+      "nameLocal": "宫保鸡丁",
+      "category": "Chef's Specials",
+      "description": "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers",
+      "price": 15.95,
+      "spicyLevel": 2,
+      "popular": true
+    },
+    {
+      "id": "52",
+      "slug": "mapo-tofu",
+      "name": "Mapo Tofu",
+      "nameLocal": "麻婆豆腐",
+      "category": "Chef's Specials",
+      "description": "Spicy Sichuan tofu in chili bean sauce with minced pork",
+      "price": 13.95,
+      "spicyLevel": 3,
+      "chefSpecial": true
+    },
+    {
+      "id": "53",
+      "slug": "sweet-sour-pork",
+      "name": "Sweet & Sour Pork",
+      "nameLocal": "咕噜肉",
+      "category": "Chef's Specials",
+      "description": "Crispy pork in tangy sweet and sour sauce with pineapple",
+      "price": 14.95
+    },
+    {
+      "id": "54",
+      "slug": "general-tso-chicken",
+      "name": "General Tso's Chicken",
+      "nameLocal": "左宗棠鸡",
+      "category": "Chef's Specials",
+      "description": "Crispy chicken in sweet and spicy sauce",
+      "price": 15.95,
+      "spicyLevel": 2,
+      "popular": true
+    },
+    {
+      "id": "55",
+      "slug": "mongolian-beef",
+      "name": "Mongolian Beef",
+      "nameLocal": "蒙古牛肉",
+      "category": "Chef's Specials",
+      "description": "Tender beef with scallions in savory brown sauce",
+      "price": 16.95
+    },
+    {
+      "id": "56",
+      "slug": "crispy-whole-fish",
+      "name": "Crispy Whole Fish",
+      "nameLocal": "干烧鱼",
+      "category": "Chef's Specials",
+      "description": "Whole fish deep-fried and topped with ginger-scallion sauce",
+      "price": 28.95,
+      "chefSpecial": true,
+      "servingSize": "Serves 3-4"
+    },
+    {
+      "id": "60",
+      "slug": "vegetable-delight",
+      "name": "Vegetable Delight",
+      "nameLocal": "素菜王",
+      "category": "Vegetarian",
+      "description": "Mixed vegetables and tofu in light sauce",
+      "price": 11.95,
+      "vegetarian": true,
+      "vegan": true
+    },
+    {
+      "id": "61",
+      "slug": "vegetable-dumplings",
+      "name": "Vegetable Dumplings",
+      "nameLocal": "素饺子",
+      "category": "Vegetarian",
+      "description": "Steamed or pan-fried dumplings with mixed vegetables",
+      "price": 8.95,
+      "vegetarian": true,
+      "vegan": true
+    },
+    {
+      "id": "70",
+      "slug": "mango-pudding",
+      "name": "Mango Pudding",
+      "nameLocal": "芒果布丁",
+      "category": "Desserts",
+      "description": "Smooth and creamy mango pudding",
+      "price": 5.95
+    },
+    {
+      "id": "71",
+      "slug": "fried-sesame-balls",
+      "name": "Fried Sesame Balls",
+      "nameLocal": "煎堆",
+      "category": "Desserts",
+      "description": "Crispy sesame balls filled with sweet red bean paste",
+      "price": 6.95
+    },
+    {
+      "id": "80",
+      "slug": "jasmine-tea",
+      "name": "Jasmine Green Tea",
+      "nameLocal": "茉莉花茶",
+      "category": "Tea",
+      "description": "Fragrant green tea with jasmine flowers",
+      "price": 3
+    },
+    {
+      "id": "81",
+      "slug": "oolong-tea",
+      "name": "Oolong Tea",
+      "nameLocal": "乌龙茶",
+      "category": "Tea",
+      "description": "Traditional semi-oxidized Chinese tea",
+      "price": 3.5
+    },
+    {
+      "id": "82",
+      "slug": "pu-erh-tea",
+      "name": "Pu-erh Tea",
+      "nameLocal": "普洱茶",
+      "category": "Tea",
+      "description": "Aged fermented tea with earthy flavor",
+      "price": 4
+    }
+  ],
+  "categories": [
+    { "id": "appetizers", "name": "Appetizers", "nameLocal": "开胃菜", "icon": "🥟" },
+    { "id": "dim-sum", "name": "Dim Sum", "nameLocal": "点心", "icon": "🥢" },
+    { "id": "soup", "name": "Soup", "nameLocal": "汤", "icon": "🍜" },
+    { "id": "noodles", "name": "Noodles", "nameLocal": "面条", "icon": "🍝" },
+    { "id": "fried-rice", "name": "Fried Rice", "nameLocal": "炒饭", "icon": "🍚" },
+    { "id": "chef-specials", "name": "Chef's Specials", "nameLocal": "招牌菜", "icon": "⭐" },
+    { "id": "vegetarian", "name": "Vegetarian", "nameLocal": "素食", "icon": "🥬" },
+    { "id": "desserts", "name": "Desserts", "nameLocal": "甜点", "icon": "🍮" },
+    { "id": "tea", "name": "Tea Selection", "nameLocal": "茶", "icon": "🍵" }
+  ],
+  "weeklySpecials": [
+    {
+      "day": "Monday",
+      "dayShort": "MON",
+      "dayNumber": 1,
+      "name": "Braised Beef Noodles",
+      "nameLocal": "红烧牛肉面",
+      "description": "Slow-braised beef with hand-pulled noodles and rich broth.",
+      "price": 15.95,
+      "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "includes": ["Hand-pulled noodles", "Braised beef", "Seasonal greens"],
+      "badges": ["Chef's Pick"]
+    },
+    {
+      "day": "Tuesday",
+      "dayShort": "TUE",
+      "dayNumber": 2,
+      "name": "Cantonese Roast Duck",
+      "nameLocal": "广式烧鸭",
+      "description": "Crispy-skinned roast duck with jasmine rice.",
+      "price": 18.95,
+      "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+      "includes": ["Roast duck", "Jasmine rice", "House sauce"]
+    },
+    {
+      "day": "Wednesday",
+      "dayShort": "WED",
+      "dayNumber": 3,
+      "name": "Mapo Tofu",
+      "nameLocal": "麻婆豆腐",
+      "description": "Silky tofu with Sichuan chili and minced pork.",
+      "price": 14.95,
+      "image": "https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=600&q=80",
+      "includes": ["Sichuan chili", "Minced pork", "Steamed rice"]
+    },
+    {
+      "day": "Thursday",
+      "dayShort": "THU",
+      "dayNumber": 4,
+      "name": "Peking Duck Feast",
+      "nameLocal": "北京烤鸭",
+      "description": "Crispy duck with pancakes, scallions, and hoisin.",
+      "price": 58,
+      "image": "https://images.unsplash.com/photo-1765441012353-10fb4701a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTExMTV8MHwxfHNlYXJjaHwzfHxCZWlqaW5nJTIwZHVja3xlbnwwfDB8fHwxNzcwNTMzMTI4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "includes": ["Crispy duck", "Mandarin pancakes", "Hoisin sauce"],
+      "badges": ["Limited"]
+    },
+    {
+      "day": "Friday",
+      "dayShort": "FRI",
+      "dayNumber": 5,
+      "name": "Kung Pao Chicken",
+      "nameLocal": "宫保鸡丁",
+      "description": "Wok-tossed chicken with peanuts and chili.",
+      "price": 16.95,
+      "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "includes": ["Roasted peanuts", "Chili peppers", "Steamed rice"],
+      "badges": ["Spicy"]
+    },
+    {
+      "day": "Saturday",
+      "dayShort": "SAT",
+      "dayNumber": 6,
+      "name": "Dim Sum Platter",
+      "nameLocal": "点心拼盘",
+      "description": "Chef’s selection of steamed and pan-fried dim sum.",
+      "price": 22.95,
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80",
+      "includes": ["Xiao long bao", "Shrimp dumplings", "Pork buns"],
+      "badges": ["Best Seller"]
+    },
+    {
+      "day": "Sunday",
+      "dayShort": "SUN",
+      "dayNumber": 0,
+      "name": "Szechuan Hot Pot",
+      "nameLocal": "四川火锅",
+      "description": "A warming pot of spices, meats, and fresh vegetables.",
+      "price": 26.95,
+      "image": "https://images.unsplash.com/photo-1677030137853-03a83b0bd630?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTExMTV8MHwxfHNlYXJjaHwzfHxob3Rwb3R8ZW58MHwwfHx8MTc3MDUzMjY4N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "includes": ["Sliced beef", "Seasonal vegetables", "House broth"],
+      "badges": ["Family Style"]
+    }
+  ]
+}

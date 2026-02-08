@@ -1,0 +1,13 @@
+{
+  "sections": [
+    { "id": "hero" },
+    { "id": "trustStats" },
+    { "id": "weeklySpecials" },
+    { "id": "menuCategories" },
+    { "id": "signatureDishes" },
+    { "id": "gallery" },
+    { "id": "reviews" },
+    { "id": "chefEnvironment" },
+    { "id": "finalCta" }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "topbar": {
+    "phone": "(555) 888-8888",
+    "phoneHref": "tel:+15558888888",
+    "address": "88 Dragon Street, New York, NY 10002",
+    "addressHref": "https://maps.google.com/?q=88+Dragon+Street+New+York+NY+10002",
+    "hours": "Open Daily 11 AM - 10 PM",
+    "badge": "Since 1995"
+  },
+  "menu": {
+    "logo": {
+      "emoji": "🐉",
+      "text": "Golden Dragon",
+      "subtext": "Authentic Chinese Cuisine",
+      "image": {
+        "src": "/uploads/golden-dragon/general/Slice 68 (1).png",
+        "alt": "Golden Dragon logo"
+      }
+    },
+    "items": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Menu",
+        "url": "/menu"
+      },
+      {
+        "text": "Specials",
+        "url": "/menu#weekly-specials"
+      },
+      {
+        "text": "About",
+        "url": "/about"
+      },
+      {
+        "text": "Food Stories",
+        "url": "/food-stories"
+      },
+      {
+        "text": "Gallery",
+        "url": "/gallery"
+      },
+      {
+        "text": "Catering",
+        "url": "/catering"
+      },
+      {
+        "text": "Reviews",
+        "url": "/reviews"
+      },
+      {
+        "text": "Contact",
+        "url": "/contact"
+      }
+    ]
+  },
+  "languages": [
+    {
+      "label": "English",
+      "locale": "en",
+      "url": "/"
+    },
+    {
+      "label": "中文",
+      "locale": "zh",
+      "url": "/zh"
+    }
+  ],
+  "cta": {
+    "text": "Order Online",
+    "link": "/order"
+  }
+}

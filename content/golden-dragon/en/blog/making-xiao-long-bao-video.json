@@ -1,0 +1,16 @@
+{
+  "id": "18",
+  "slug": "making-xiao-long-bao-video",
+  "title": "How We Make Xiao Long Bao (Video)",
+  "titleChinese": "小笼包制作过程",
+  "category": "Chef's Secrets",
+  "excerpt": "Watch our chefs craft perfect soup dumplings from scratch - a delicate art requiring years of practice.",
+  "content": "Video demonstration of dumpling making...",
+  "author": "Chef Chen Wei",
+  "date": "2024-11-14",
+  "readTime": "15 min",
+  "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+  "type": "video",
+  "videoUrl": "https://youtube.com/watch?v=example",
+  "tags": ["Xiao Long Bao", "Video", "Technique"]
+}

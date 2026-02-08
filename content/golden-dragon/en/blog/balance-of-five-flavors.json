@@ -1,0 +1,15 @@
+{
+  "id": "9",
+  "slug": "balance-of-five-flavors",
+  "title": "The Balance of Five Flavors in Chinese Cuisine",
+  "titleChinese": "中餐的五味平衡",
+  "category": "Health & Nutrition",
+  "excerpt": "Learn how traditional Chinese cooking balances sweet, sour, bitter, spicy, and salty for optimal health.",
+  "content": "The five flavors correspond to five elements...",
+  "author": "Chef Chen Wei",
+  "date": "2024-11-05",
+  "readTime": "7 min read",
+  "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=800&q=80",
+  "type": "article",
+  "tags": ["Five Flavors", "Health", "Balance"]
+}

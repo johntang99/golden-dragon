@@ -2,9 +2,12 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { menuItems, categories, getMenuByCategory, getChefSpecials } from '@/lib/menu';
-import { weeklySpecials, getTodaysSpecial } from '@/lib/specials';
-import { siteConfig } from '@/lib/site';
+import { usePathname } from 'next/navigation';
+import { getLocaleFromPathname } from '@/lib/locale';
+import { getSiteIdFromHost } from '@/lib/sites';
+import { getSiteConfig } from '@/lib/site';
+import { getMenuCategories, getMenuByCategory, getChefSpecials } from '@/lib/menu';
+import { getWeeklySpecials, getTodaysSpecial } from '@/lib/specials';
 
 // Photo mapping for menu items
 const dishPhotos: { [key: string]: string } = {
@@ -60,9 +63,15 @@ const dishPhotos: { [key: string]: string } = {
 };
 
 export default function MenuPage() {
-  const chefSpecials = getChefSpecials();
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const siteId = getSiteIdFromHost(typeof window !== 'undefined' ? window.location.host : undefined);
+  const siteConfig = getSiteConfig(siteId, locale);
+  const categories = getMenuCategories(siteId, locale);
+  const chefSpecials = getChefSpecials(siteId, locale);
   const regularCategories = categories.filter(cat => cat.name !== "Chef's Specials");
-  const todaysSpecial = getTodaysSpecial();
+  const todaysSpecial = getTodaysSpecial(siteId, locale);
+  const weeklySpecials = getWeeklySpecials(siteId, locale);
   const todayDayNumber = new Date().getDay();
 
   return (
@@ -332,7 +341,7 @@ export default function MenuPage() {
 
       {/* Regular Menu - List Layout */}
       {regularCategories.map((category) => {
-        const items = getMenuByCategory(category.name);
+        const items = getMenuByCategory(category.name, siteId, locale);
         if (items.length === 0) return null;
 
         return (

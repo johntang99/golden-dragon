@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "title": "Golden Dragon",
+    "subtitle": "Where Tradition Meets Excellence",
+    "clinicName": "Authentic Chinese Cuisine in New York City",
+    "tagline": "Handcrafted dim sum, banquet classics, and modern favorites",
+    "description": "Authentic Chinese cuisine with fresh ingredients and family recipes. Celebrate tradition with every dish, from soup dumplings to Peking duck.",
+    "backgroundImage": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1600&q=80",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1200&q=80",
+    "badge": "🏮 Since 1995 • Authentic Cantonese Cuisine",
+    "slogan": {
+      "primary": "Where Tradition Meets Excellence",
+      "secondary": "传统与卓越的完美结合"
+    },
+    "primaryCta": { "text": "Order Online", "link": "/order" },
+    "secondaryCta": { "text": "Reservations", "link": "/reservations" },
+    "images": [
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1600&q=80",
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1600&q=80",
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=1600&q=80"
+    ]
+  },
+  "introduction": {
+    "text": "Golden Dragon brings together Cantonese classics, Sichuan spice, and Northern comfort dishes. From our handcrafted dim sum to chef specials, every recipe is prepared with premium ingredients and time-honored technique."
+  },
+  "trustStats": {
+    "title": "Why Guests Love Us",
+    "items": [
+      { "value": "30+", "label": "Years Experience", "icon": "🏆" },
+      { "value": "200+", "label": "Authentic Dishes", "icon": "🥢" },
+      { "value": "4.8★", "label": "Customer Rating", "icon": "⭐" },
+      { "value": "10,000+", "label": "Happy Customers", "icon": "❤️" }
+    ]
+  },
+  "specialsSection": {
+    "titleToday": "Today's Special",
+    "titleSuffix": "Special",
+    "subtitle": "今日推荐",
+    "availabilityToday": "Available today • Limited quantity",
+    "availabilityOther": "Viewing {day} • Limited quantity",
+    "primaryCta": { "text": "Order Now", "link": "/order" },
+    "secondaryCta": { "text": "Call Now", "link": "tel:+15558888888" }
+  },
+  "menuSection": {
+    "badge": "OUR MENU",
+    "title": "Explore Our Cuisine",
+    "subtitle": "Authentic Chinese dishes prepared fresh daily",
+    "viewMenuCta": { "text": "View Complete Menu", "link": "/menu" },
+    "categoryPhotos": [
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80",
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80",
+      "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80",
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80"
+    ]
+  },
+  "signatureDishesSection": {
+    "kicker": "Where Tradition Meets Excellence",
+    "badge": "Chef's Selection",
+    "title": "Signature Dishes",
+    "titleLocal": "招牌菜",
+    "description": "Master Chef Chen Wei's masterpieces - Traditional recipes perfected over 30 years",
+    "cta": { "text": "Explore All Signature Dishes", "link": "/menu#specials" },
+    "dishes": [
+      {
+        "name": "Xiao Long Bao",
+        "nameLocal": "小笼包",
+        "description": "Soup dumplings with savory broth",
+        "price": 9.95,
+        "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80"
+      },
+      {
+        "name": "Peking Duck",
+        "nameLocal": "北京烤鸭",
+        "description": "Crispy duck with pancakes",
+        "price": 58.0,
+        "image": "https://images.unsplash.com/photo-1765441012353-10fb4701a276?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3OTExMTV8MHwxfHNlYXJjaHwzfHxCZWlqaW5nJTIwZHVja3xlbnwwfDB8fHwxNzcwNTMzMTI4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "name": "Dan Dan Noodles",
+        "nameLocal": "担担面",
+        "description": "Spicy Sichuan noodles with peanut sauce",
+        "price": 12.95,
+        "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80"
+      },
+      {
+        "name": "Kung Pao Chicken",
+        "nameLocal": "宫保鸡丁",
+        "description": "Spicy stir-fried chicken with peanuts",
+        "price": 15.95,
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80"
+      },
+      {
+        "name": "Mapo Tofu",
+        "nameLocal": "麻婆豆腐",
+        "description": "Spicy tofu in chili bean sauce",
+        "price": 13.95,
+        "image": "https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=600&q=80"
+      },
+      {
+        "name": "Char Siu",
+        "nameLocal": "叉烧",
+        "description": "BBQ pork with honey glaze",
+        "price": 16.95,
+        "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "gallery-1",
+      "src": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=1000&q=80",
+      "alt": "Chef plating a signature dish",
+      "title": "Chef Crafted",
+      "category": "kitchen",
+      "description": "Signature dishes prepared fresh every day.",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "gallery-2",
+      "src": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1000&q=80",
+      "alt": "Dim sum spread",
+      "title": "Dim Sum Favorites",
+      "category": "dim-sum",
+      "description": "Handmade dumplings and steamed buns.",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "gallery-3",
+      "src": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1000&q=80",
+      "alt": "Restaurant dining room",
+      "title": "Dining Room",
+      "category": "interior",
+      "description": "Warm, welcoming space for family gatherings.",
+      "featured": false,
+      "order": 3
+    }
+  ],
+  "gallerySection": {
+    "badge": "GALLERY",
+    "title": "A Visual Feast",
+    "subtitle": "Authentic Chinese culinary artistry",
+    "cta": { "text": "View Full Gallery", "link": "/gallery" },
+    "scrollImages": [
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80",
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80",
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80",
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+      "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80",
+      "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+      "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+      "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80",
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80",
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80",
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+      "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80",
+      "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80"
+    ]
+  },
+  "reviewsSection": {
+    "badge": "TESTIMONIALS",
+    "title": "What Our Guests Say",
+    "subtitle": "Authentic flavors, memorable experiences",
+    "reviews": [
+      {
+        "name": "Sarah Chen",
+        "rating": 5,
+        "text": "Best dim sum in NYC! Authentic flavors that remind me of Hong Kong. The soup dumplings are perfection!"
+      },
+      {
+        "name": "Michael Wong",
+        "rating": 5,
+        "text": "Family has been coming here for 10 years. Consistent quality, generous portions, and friendly service."
+      },
+      {
+        "name": "Emily Rodriguez",
+        "rating": 5,
+        "text": "The Peking Duck is incredible! Must order 24 hours ahead but totally worth it. Best I've ever had."
+      },
+      {
+        "name": "David Kim",
+        "rating": 5,
+        "text": "Authentic Chinese cuisine. Chef Chen Wei is a master. Everything is fresh and delicious!"
+      }
+    ]
+  },
+  "chefSection": {
+    "badge": "MASTER CHEF",
+    "name": "Chef Chen Wei",
+    "nameLocal": "陈伟大厨",
+    "image": "/chinese-chef-fine-dining.png",
+    "description": "With over 30 years of culinary excellence, Master Chef Chen Wei brings authentic flavors from Beijing to New York. His expertise in traditional Chinese cooking techniques creates dishes that honor generations of family recipes.",
+    "descriptionSecondary": "Every dish is prepared with meticulous attention to detail, balancing flavors and textures to create an unforgettable dining experience.",
+    "stats": [
+      { "icon": "Award", "label": "30+ Years" },
+      { "icon": "Trophy", "label": "Award Winning" }
+    ]
+  },
+  "environmentSection": {
+    "badge": "OUR RESTAURANT",
+    "title": "Elegant Atmosphere",
+    "titleLocal": "优雅环境",
+    "subtitle": "A welcoming space where tradition meets modern comfort",
+    "photos": [
+      {
+        "src": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+        "alt": "Elegant dining room",
+        "title": "Elegant Dining",
+        "titleLocal": "优雅用餐"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80",
+        "alt": "Private dining area",
+        "title": "Private Rooms",
+        "titleLocal": "私人包厢"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80",
+        "alt": "Restaurant bar",
+        "title": "Full Bar",
+        "titleLocal": "酒吧服务"
+      }
+    ],
+    "features": [
+      { "icon": "🏮", "title": "Traditional Decor", "desc": "Chinese elegance meets modern comfort" },
+      { "icon": "👨‍👩‍👧‍👦", "title": "Family Friendly", "desc": "Perfect for gatherings and celebrations" },
+      { "icon": "🍽️", "title": "Full Service", "desc": "Dine-in, takeout, delivery & catering" }
+    ]
+  },
+  "cta": {
+    "title": "Celebrate with Golden Dragon",
+    "description": "Reserve a table or plan your next banquet with our signature menu.",
+    "primaryCta": { "text": "Book a Table", "link": "/reservations" },
+    "secondaryCta": { "text": "View Menu", "link": "/menu" }
+  },
+  "finalCta": {
+    "title": "Experience Authentic Chinese Dining",
+    "description": "Reserve your table today and discover why Golden Dragon has been New York's favorite Chinese restaurant for over 30 years.",
+    "primaryCta": { "text": "Make Reservation", "link": "/reservations" },
+    "secondaryCta": { "text": "Call: (555) 888-8888", "link": "tel:+15558888888" },
+    "address": "88 Dragon Street, New York, NY 10002"
+  },
+  "posts": [
+    {
+      "title": "The Balance of Five Flavors in Chinese Cuisine",
+      "excerpt": "Learn how sweet, sour, bitter, spicy, and salty come together in our signature dishes.",
+      "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1000&q=80"
+    },
+    {
+      "title": "Dim Sum Traditions, Modern Craft",
+      "excerpt": "From bamboo steamers to modern plating, explore the art of dim sum.",
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1000&q=80"
+    }
+  ]
+}

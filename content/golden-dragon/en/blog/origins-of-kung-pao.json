@@ -1,0 +1,15 @@
+{
+  "id": "3",
+  "slug": "origins-of-kung-pao",
+  "title": "Kung Pao Chicken: A Sichuan Classic",
+  "titleChinese": "宫保鸡丁的四川传奇",
+  "category": "Recipe History",
+  "excerpt": "Named after a Qing Dynasty official, this spicy dish has a rich history spanning centuries.",
+  "content": "The dish was named after Ding Baozhen...",
+  "author": "Chef Chen Wei",
+  "date": "2024-12-01",
+  "readTime": "5 min read",
+  "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80",
+  "type": "article",
+  "tags": ["Kung Pao", "Sichuan", "History"]
+}

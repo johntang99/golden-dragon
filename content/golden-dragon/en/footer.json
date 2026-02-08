@@ -1,0 +1,36 @@
+{
+  "brand": {
+    "logoText": "GD",
+    "name": "Golden Dragon",
+    "description": "Authentic Chinese cuisine served with warmth and tradition."
+  },
+  "quickLinks": [
+    { "text": "Menu", "url": "/menu" },
+    { "text": "Reservations", "url": "/reservations" },
+    { "text": "Catering", "url": "/catering" },
+    { "text": "Contact", "url": "/contact" }
+  ],
+  "services": [
+    { "text": "Dim Sum", "url": "/menu#dim-sum" },
+    { "text": "Noodles", "url": "/menu#noodles" },
+    { "text": "Chef's Specials", "url": "/menu#specials" },
+    { "text": "Tea Selection", "url": "/menu#tea" }
+  ],
+  "contact": {
+    "addressLines": ["88 Dragon Street", "New York, NY 10002"],
+    "phone": "(555) 888-8888",
+    "phoneLink": "tel:+15558888888",
+    "email": "info@goldendragon.com",
+    "emailLink": "mailto:info@goldendragon.com"
+  },
+  "hours": [
+    "Mon-Thu: 11:00 AM - 10:00 PM",
+    "Fri-Sat: 11:00 AM - 11:00 PM",
+    "Sun: 11:00 AM - 10:00 PM"
+  ],
+  "legalLinks": [
+    { "text": "Privacy Policy", "url": "/privacy" },
+    { "text": "Terms of Service", "url": "/terms" }
+  ],
+  "copyright": "© {year} Golden Dragon. All rights reserved."
+}

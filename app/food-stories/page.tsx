@@ -3,18 +3,25 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Metadata } from 'next';
-import { foodStories, categories, getStoriesByCategory } from '@/lib/foodStories';
+import { usePathname } from 'next/navigation';
+import { getLocaleFromPathname } from '@/lib/locale';
+import { getSiteIdFromHost } from '@/lib/sites';
+import { getFoodStories, getFoodStoryCategories, getStoriesByCategory } from '@/lib/foodStories';
 import { Clock, User, BookOpen, Play } from 'lucide-react';
 
 export default function FoodStoriesPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const siteId = getSiteIdFromHost(typeof window !== 'undefined' ? window.location.host : undefined);
+  const foodStories = getFoodStories(siteId, locale);
+  const categories = getFoodStoryCategories(siteId, locale);
   
   // Featured story (first one)
   const featuredStory = foodStories[0];
   
   // Rest of stories (excluding featured)
-  const allStories = getStoriesByCategory(activeCategory);
+  const allStories = getStoriesByCategory(activeCategory, siteId, locale);
   const filteredStories = activeCategory === 'All' 
     ? allStories.slice(1) 
     : allStories.filter(s => s.id !== featuredStory.id);

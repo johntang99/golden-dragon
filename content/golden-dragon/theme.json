@@ -1,0 +1,28 @@
+{
+  "typography": {
+    "display": "3rem",
+    "heading": "2.25rem",
+    "subheading": "1.25rem",
+    "body": "1rem",
+    "small": "0.875rem"
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#b91c1c",
+      "dark": "#991b1b",
+      "light": "#f87171",
+      "50": "#fef2f2",
+      "100": "#fee2e2"
+    },
+    "secondary": {
+      "DEFAULT": "#f59e0b",
+      "dark": "#d97706",
+      "light": "#fbbf24",
+      "50": "#fffbeb"
+    },
+    "backdrop": {
+      "primary": "#fff7ed",
+      "secondary": "#fffbf5"
+    }
+  }
+}

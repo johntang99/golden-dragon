@@ -1,0 +1,17 @@
+{
+  "main": [
+    { "text": "Home", "url": "/" },
+    { "text": "Menu", "url": "/menu" },
+    { "text": "Specials", "url": "/menu#weekly-specials" },
+    { "text": "About", "url": "/about" },
+    { "text": "Food Stories", "url": "/food-stories" },
+    { "text": "Gallery", "url": "/gallery" },
+    { "text": "Catering", "url": "/catering" },
+    { "text": "Reviews", "url": "/reviews" },
+    { "text": "Contact", "url": "/contact" }
+  ],
+  "cta": {
+    "text": "Order Online",
+    "link": "/order"
+  }
+}

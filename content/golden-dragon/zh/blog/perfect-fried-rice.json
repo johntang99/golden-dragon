@@ -1,0 +1,15 @@
+{
+  "id": "4",
+  "slug": "perfect-fried-rice",
+  "title": "Chef's Secret to Perfect Fried Rice",
+  "titleChinese": "大厨的完美炒饭秘诀",
+  "category": "Cooking Tips",
+  "excerpt": "Learn the professional techniques that make restaurant fried rice fluffy, flavorful, and never greasy.",
+  "content": "The key to great fried rice is day-old rice...",
+  "author": "Chef Chen Wei",
+  "date": "2024-11-28",
+  "readTime": "7 min read",
+  "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=800&q=80",
+  "type": "article",
+  "tags": ["Fried Rice", "Technique", "Tips"]
+}

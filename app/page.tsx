@@ -1,18 +1,31 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Star, ArrowRight, Award, ChevronLeft, ChevronRight } from 'lucide-react';
-import { siteConfig } from '@/lib/site';
-import { menuItems, getChefSpecials, categories } from '@/lib/menu';
-import { weeklySpecials } from '@/lib/specials';
+import { getLocaleFromPathname } from '@/lib/locale';
+import { getSiteIdFromHost } from '@/lib/sites';
+import { getSiteConfig } from '@/lib/site';
+import { getHomeData } from '../lib/home';
+import { getHomeLayout } from '../lib/homeLayout';
+import { getMenuCategories } from '@/lib/menu';
+import { getWeeklySpecials } from '@/lib/specials';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [dishesVisible, setDishesVisible] = useState(false);
   const [activeSpecialDay, setActiveSpecialDay] = useState(() => new Date().getDay());
   const dishesRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  const siteId = getSiteIdFromHost(typeof window !== 'undefined' ? window.location.host : undefined);
+  const siteConfig = getSiteConfig(siteId, locale);
+  const homeData = getHomeData(siteId, locale);
+  const categories = getMenuCategories(siteId, locale);
+  const weeklySpecials = getWeeklySpecials(siteId, locale);
   const todayDayNumber = new Date().getDay();
   const activeSpecial = weeklySpecials.find((special) => special.dayNumber === activeSpecialDay) || weeklySpecials[1];
   const isToday = activeSpecialDay === todayDayNumber;
@@ -59,51 +72,61 @@ export default function Home() {
 
   const featuredCategories = categories.slice(0, 6);
 
-  // Signature dishes with photos
-  const signatureDishes = [
-    {
-      name: 'Xiao Long Bao',
-      nameLocal: '小笼包',
-      description: 'Soup dumplings with savory broth',
-      price: 9.95,
-      image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80',
-    },
-    {
-      name: 'Peking Duck',
-      nameLocal: '北京烤鸭',
-      description: 'Crispy duck with pancakes and hoisin',
-      price: 58.00,
-      image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80',
-    },
-    {
-      name: 'Dan Dan Noodles',
-      nameLocal: '担担面',
-      description: 'Spicy Sichuan noodles with peanut sauce',
-      price: 12.95,
-      image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80',
-    },
-    {
-      name: 'Kung Pao Chicken',
-      nameLocal: '宫保鸡丁',
-      description: 'Spicy stir-fried chicken with peanuts',
-      price: 15.95,
-      image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80',
-    },
-    {
-      name: 'Mapo Tofu',
-      nameLocal: '麻婆豆腐',
-      description: 'Spicy tofu in chili bean sauce',
-      price: 13.95,
-      image: 'https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=600&q=80',
-    },
-    {
-      name: 'Char Siu',
-      nameLocal: '叉烧',
-      description: 'BBQ pork with honey glaze',
-      price: 16.95,
-      image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80',
-    },
-  ];
+  type SignatureDish = {
+    name: string;
+    nameLocal: string;
+    description: string;
+    price: number;
+    image: string;
+  };
+  const signatureSection = homeData?.signatureDishesSection;
+  // Signature dishes with photos (content-driven)
+  const signatureDishes: SignatureDish[] = signatureSection?.dishes?.length
+    ? (signatureSection.dishes as SignatureDish[])
+    : [
+        {
+          name: 'Xiao Long Bao',
+          nameLocal: '小笼包',
+          description: 'Soup dumplings with savory broth',
+          price: 9.95,
+          image: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80',
+        },
+        {
+          name: 'Peking Duck',
+          nameLocal: '北京烤鸭',
+          description: 'Crispy duck with pancakes and hoisin',
+          price: 58.0,
+          image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80',
+        },
+        {
+          name: 'Dan Dan Noodles',
+          nameLocal: '担担面',
+          description: 'Spicy Sichuan noodles with peanut sauce',
+          price: 12.95,
+          image: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80',
+        },
+        {
+          name: 'Kung Pao Chicken',
+          nameLocal: '宫保鸡丁',
+          description: 'Spicy stir-fried chicken with peanuts',
+          price: 15.95,
+          image: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80',
+        },
+        {
+          name: 'Mapo Tofu',
+          nameLocal: '麻婆豆腐',
+          description: 'Spicy tofu in chili bean sauce',
+          price: 13.95,
+          image: 'https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=600&q=80',
+        },
+        {
+          name: 'Char Siu',
+          nameLocal: '叉烧',
+          description: 'BBQ pork with honey glaze',
+          price: 16.95,
+          image: 'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80',
+        },
+      ];
 
   // Gallery images - film strip style
   const galleryImages = [
@@ -139,10 +162,31 @@ export default function Home() {
     },
   ];
 
-  return (
-    <main>
-      {/* Hero Section - Rotating Photos with Elegant Overlay */}
-      <section className="relative h-[90vh] overflow-hidden">
+  const homeLayout = getHomeLayout(siteId, locale);
+  const defaultSectionOrder = [
+    'hero',
+    'trustStats',
+    'weeklySpecials',
+    'menuCategories',
+    'signatureDishes',
+    'gallery',
+    'reviews',
+    'chefEnvironment',
+    'finalCta',
+  ];
+  const rawSections = Array.isArray(homeLayout?.sections) && homeLayout.sections.length
+    ? homeLayout.sections
+    : defaultSectionOrder;
+  const resolveSectionId = (entry: any) => (typeof entry === 'string' ? entry : entry?.id);
+  const isSectionEnabled = (entry: any) =>
+    typeof entry === 'string' ? true : entry?.enabled !== false;
+  const sectionIds = rawSections
+    .filter(isSectionEnabled)
+    .map(resolveSectionId)
+    .filter(Boolean);
+
+  const heroSection = (
+    <section className="relative h-[90vh] overflow-hidden">
         {/* Image Carousel */}
         {heroImages.map((image, idx) => (
           <div
@@ -266,10 +310,11 @@ export default function Home() {
             />
           </svg>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Trust Stats with Ornate Style */}
-      <section className="py-12 px-4 bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)]">
+  const trustStatsSection = (
+    <section className="py-12 px-4 bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)]">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -289,10 +334,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Today's Special - Weekly Carousel */}
-      <section className="py-20 px-4 bg-gradient-to-b from-[var(--backdrop-primary)] to-white relative">
+  const weeklySpecialsSection = (
+    <section className="py-20 px-4 bg-gradient-to-b from-[var(--backdrop-primary)] to-white relative">
         <div className="absolute top-12 right-10 text-[8rem] opacity-5">🥢</div>
         <div className="container mx-auto max-w-6xl relative">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
@@ -395,10 +441,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Menu Categories - With Food Photos */}
-      <section className="py-24 px-4 bg-white relative">
+  const menuCategoriesSection = (
+    <section className="py-24 px-4 bg-white relative">
         {/* Decorative background elements */}
         <div className="absolute top-20 left-10 text-[10rem] opacity-5">🏮</div>
         <div className="absolute bottom-20 right-10 text-[10rem] opacity-5">🐉</div>
@@ -471,10 +518,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Signature Dishes - Elegant Showcase with Special Frame */}
-      <section className="py-24 px-4 bg-gradient-to-br from-[var(--primary)] via-[var(--primary-dark)] to-black relative overflow-hidden">
+  const signatureDishesSection = (
+    <section className="py-24 px-4 bg-gradient-to-br from-[var(--primary)] via-[var(--primary-dark)] to-black relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--secondary)]/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[var(--secondary)]/10 rounded-full blur-3xl"></div>
@@ -499,7 +547,7 @@ export default function Home() {
             {/* Slogan kicker - subtle repeat */}
             <div className="mb-6">
               <p className="text-small text-[var(--secondary)] italic tracking-wide">
-                Where Tradition Meets Excellence
+                {signatureSection?.kicker || 'Where Tradition Meets Excellence'}
               </p>
             </div>
             
@@ -509,18 +557,22 @@ export default function Home() {
                 <div className="text-8xl mb-4">⭐</div>
                 <div className="flex items-center gap-4 justify-center">
                   <div className="h-px w-16 bg-gradient-to-r from-transparent to-[var(--secondary)]"></div>
-                  <span className="text-small font-bold text-[var(--secondary)] tracking-widest uppercase">Chef's Selection</span>
+                  <span className="text-small font-bold text-[var(--secondary)] tracking-widest uppercase">
+                    {signatureSection?.badge || "Chef's Selection"}
+                  </span>
                   <div className="h-px w-16 bg-gradient-to-l from-transparent to-[var(--secondary)]"></div>
                 </div>
               </div>
             </div>
             
-            <h2 className="text-display mb-4 text-white font-serif">Signature Dishes</h2>
+            <h2 className="text-display mb-4 text-white font-serif">
+              {signatureSection?.title || 'Signature Dishes'}
+            </h2>
             <p className="text-heading text-[var(--secondary)] mb-3 text-chinese" style={{ fontFamily: 'Noto Sans SC' }}>
-              招牌菜
+              {signatureSection?.titleLocal || '招牌菜'}
             </p>
             <p className="text-subheading text-white/90 max-w-3xl mx-auto">
-              Master Chef Chen Wei's masterpieces - Traditional recipes perfected over 30 years
+              {signatureSection?.description || "Master Chef Chen Wei's masterpieces - Traditional recipes perfected over 30 years"}
             </p>
           </div>
 
@@ -587,18 +639,19 @@ export default function Home() {
 
           <div className="text-center">
             <Link
-              href="/menu#specials"
+              href={signatureSection?.cta?.link || "/menu#specials"}
               className="inline-flex items-center gap-3 bg-white text-[var(--primary)] px-10 py-5 rounded-full hover:bg-gray-50 font-bold text-subheading transition-all shadow-2xl hover:scale-105 border-2 border-white/50"
             >
-              Explore All Signature Dishes
+              {signatureSection?.cta?.text || "Explore All Signature Dishes"}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Photo Gallery - Full-Width Auto-Scrolling */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+  const gallerySection = (
+    <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="text-center mb-12 px-4">
           <span className="inline-block px-6 py-3 bg-[var(--secondary)] text-white rounded-full text-small font-bold mb-6 shadow-xl">
             GALLERY
@@ -608,12 +661,8 @@ export default function Home() {
         </div>
 
         {/* Full-width scrolling container */}
-        <div 
-          className="gallery-scroll-container"
-          onMouseEnter={(e) => e.currentTarget.style.animationPlayState = 'paused'}
-          onMouseLeave={(e) => e.currentTarget.style.animationPlayState = 'running'}
-        >
-          <div className="gallery-scroll-track">
+        <div className="gallery-scroll-container">
+          <div className="gallery-scroll-track flex gap-6">
             {/* First set of images - 20 Chinese dishes */}
             {[
               'https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80',
@@ -639,7 +688,7 @@ export default function Home() {
             ].map((src, idx) => (
               <div
                 key={idx}
-                className="gallery-item"
+                className="gallery-item shrink-0"
               >
                 <div className="relative w-80 aspect-[4/3] rounded-lg overflow-hidden border-4 border-[var(--secondary)]/40 shadow-2xl hover:scale-105 hover:border-[var(--secondary)] transition-all duration-500">
                   <Image
@@ -678,7 +727,7 @@ export default function Home() {
             ].map((src, idx) => (
               <div
                 key={`dup-${idx}`}
-                className="gallery-item"
+                className="gallery-item shrink-0"
               >
                 <div className="relative w-80 aspect-[4/3] rounded-lg overflow-hidden border-4 border-[var(--secondary)]/40 shadow-2xl hover:scale-105 hover:border-[var(--secondary)] transition-all duration-500">
                   <Image
@@ -703,10 +752,11 @@ export default function Home() {
             View Full Gallery <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Customer Reviews - Rail/Carousel */}
-      <section className="py-24 px-4 bg-white">
+  const reviewsSection = (
+    <section className="py-24 px-4 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <div className="inline-block relative mb-6">
@@ -746,10 +796,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Chef & Restaurant Environment - Combined Section */}
-      <section className="py-24 px-4 bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)]">
+  const chefEnvironmentSection = (
+    <section className="py-24 px-4 bg-gradient-to-br from-[var(--backdrop-primary)] to-[var(--backdrop-secondary)]">
         <div className="container mx-auto max-w-7xl">
           {/* Chef Section */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
@@ -873,10 +924,11 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* Final CTA - Elegant */}
-      <section className="py-24 px-4 bg-gradient-to-br from-black via-[var(--primary-dark)] to-black relative overflow-hidden">
+  const finalCtaSection = (
+    <section className="py-24 px-4 bg-gradient-to-br from-black via-[var(--primary-dark)] to-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50m-30 0a30 30 0 1 0 60 0a30 30 0 1 0 -60 0' stroke='%23F59E0B' fill='none'/%3E%3C/svg%3E")`,
         }}></div>
@@ -907,49 +959,17 @@ export default function Home() {
             📍 {siteConfig.contact.address.full}
           </p>
         </div>
-      </section>
+    </section>
+  );
 
-      {/* CSS for scrollbar hiding and auto-scroll gallery */}
-      <style jsx>{`
+  const galleryStyles = (
+    <style jsx>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
-        }
-
-        .gallery-scroll-container {
-          width: 100vw;
-          overflow: hidden;
-          position: relative;
-          left: 50%;
-          right: 50%;
-          margin-left: -50vw;
-          margin-right: -50vw;
-        }
-
-        .gallery-scroll-track {
-          display: flex;
-          gap: 1.5rem;
-          animation: scroll 30s linear infinite;
-        }
-
-        .gallery-scroll-track:hover {
-          animation-play-state: paused;
-        }
-
-        .gallery-item {
-          flex-shrink: 0;
-        }
-
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
         }
 
         /* Collage entrance animations - flying in from different directions */
@@ -1058,6 +1078,30 @@ export default function Home() {
           animation: fadeIn 1.5s ease-out 1.4s both;
         }
       `}</style>
+  );
+
+  const sectionMap: Record<string, ReactNode> = {
+    hero: heroSection,
+    trustStats: trustStatsSection,
+    weeklySpecials: weeklySpecialsSection,
+    menuCategories: menuCategoriesSection,
+    signatureDishes: signatureDishesSection,
+    gallery: gallerySection,
+    reviews: reviewsSection,
+    chefEnvironment: chefEnvironmentSection,
+    finalCta: finalCtaSection,
+  };
+
+  return (
+    <main>
+      {sectionIds
+        .map((sectionId: string) => {
+          const section = sectionMap[sectionId];
+          if (!section) return null;
+          return <div key={sectionId}>{section}</div>;
+        })
+        .filter(Boolean)}
+      {galleryStyles}
     </main>
   );
 }

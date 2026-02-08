@@ -193,3 +193,39 @@ h1, h2, h3, h4 {
   font-family: var(--font-chinese);
   font-weight: var(--weight-medium);
 }
+
+/* Home gallery marquee */
+.gallery-scroll-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.gallery-scroll-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: gallery-scroll 60s linear infinite;
+  will-change: transform;
+}
+
+.gallery-scroll-container:hover .gallery-scroll-track {
+  animation-play-state: paused;
+}
+
+.gallery-item {
+  flex-shrink: 0;
+}
+
+@keyframes gallery-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

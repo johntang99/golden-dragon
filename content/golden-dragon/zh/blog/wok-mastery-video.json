@@ -1,0 +1,16 @@
+{
+  "id": "5",
+  "slug": "wok-mastery-video",
+  "title": "Mastering the Wok: Heat Control",
+  "titleChinese": "掌握炒锅：火候控制",
+  "category": "Cooking Tips",
+  "excerpt": "Watch Chef Chen demonstrate proper wok technique and heat management for authentic stir-fry.",
+  "content": "Video tutorial on wok cooking...",
+  "author": "Chef Chen Wei",
+  "date": "2024-11-25",
+  "readTime": "12 min",
+  "image": "https://images.unsplash.com/photo-1596040033229-a0b3b1fea2b8?w=800&q=80",
+  "type": "video",
+  "videoUrl": "https://youtube.com/watch?v=example",
+  "tags": ["Wok", "Technique", "Video"]
+}

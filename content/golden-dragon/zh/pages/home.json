@@ -1,0 +1,265 @@
+{
+  "hero": {
+    "title": "金龙阁",
+    "subtitle": "传统与卓越的完美结合",
+    "clinicName": "纽约正宗中式美食",
+    "tagline": "手工点心、宴席名菜与经典佳肴",
+    "description": "甄选新鲜食材，传承家传秘方。从小笼包到北京烤鸭，每一道菜都满载匠心。",
+    "backgroundImage": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1600&q=80",
+    "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1200&q=80",
+    "primaryCta": { "text": "在线点餐", "link": "/order" },
+    "secondaryCta": { "text": "预约订位", "link": "/reservations" },
+    "badge": "🏮 自1995年 • 正宗粤式风味",
+    "slogan": {
+      "primary": "传统与卓越的完美结合",
+      "secondary": "传承经典，匠心呈现"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1600&q=80",
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1600&q=80",
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=1600&q=80"
+    ]
+  },
+  "introduction": {
+    "text": "金龙阁融合粤式经典、川味香辣与北方家常菜。手工点心与主厨推荐让每一次用餐都值得期待。"
+  },
+  "trustStats": {
+    "title": "宾客喜爱的理由",
+    "items": [
+      { "value": "30+", "label": "年资历", "icon": "🏆" },
+      { "value": "200+", "label": "道地菜品", "icon": "🥢" },
+      { "value": "4.8★", "label": "顾客评分", "icon": "⭐" },
+      { "value": "10,000+", "label": "满意食客", "icon": "❤️" }
+    ]
+  },
+  "specialsSection": {
+    "titleToday": "今日推荐",
+    "titleSuffix": "推荐",
+    "subtitle": "今日推荐",
+    "availabilityToday": "今日供应 • 数量有限",
+    "availabilityOther": "查看{day} • 数量有限",
+    "primaryCta": { "text": "立即下单", "link": "/order" },
+    "secondaryCta": { "text": "电话咨询", "link": "tel:+15558888888" }
+  },
+  "menuSection": {
+    "badge": "我们的菜单",
+    "title": "探索我们的美味",
+    "subtitle": "每日新鲜制作的正宗中式佳肴",
+    "viewMenuCta": { "text": "查看完整菜单", "link": "/menu" },
+    "categoryPhotos": [
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80",
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80",
+      "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80",
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80"
+    ]
+  },
+  "signatureDishesSection": {
+    "kicker": "传统与卓越的完美结合",
+    "badge": "主厨精选",
+    "title": "招牌菜",
+    "titleLocal": "招牌菜",
+    "description": "陈伟大厨三十年匠心之作，经典菜品代代相传。",
+    "cta": { "text": "探索全部招牌菜", "link": "/menu#specials" },
+    "dishes": [
+      {
+        "name": "Xiao Long Bao",
+        "nameLocal": "小笼包",
+        "description": "鲜美汤汁与薄皮完美结合",
+        "price": 9.95,
+        "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80"
+      },
+      {
+        "name": "Peking Duck",
+        "nameLocal": "北京烤鸭",
+        "description": "外酥里嫩，配薄饼与甜面酱",
+        "price": 58.0,
+        "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80"
+      },
+      {
+        "name": "Dan Dan Noodles",
+        "nameLocal": "担担面",
+        "description": "麻辣鲜香的四川经典",
+        "price": 12.95,
+        "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80"
+      },
+      {
+        "name": "Kung Pao Chicken",
+        "nameLocal": "宫保鸡丁",
+        "description": "香辣花生鸡丁",
+        "price": 15.95,
+        "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80"
+      },
+      {
+        "name": "Mapo Tofu",
+        "nameLocal": "麻婆豆腐",
+        "description": "麻辣鲜香的川味豆腐",
+        "price": 13.95,
+        "image": "https://images.unsplash.com/photo-1542528180-a1208c5169a5?w=600&q=80"
+      },
+      {
+        "name": "Char Siu",
+        "nameLocal": "叉烧",
+        "description": "蜜汁烧烤叉烧",
+        "price": 16.95,
+        "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80"
+      }
+    ]
+  },
+  "images": [
+    {
+      "id": "gallery-1",
+      "src": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=1000&q=80",
+      "alt": "主厨摆盘",
+      "title": "匠心出品",
+      "category": "kitchen",
+      "description": "每日现做的招牌佳肴。",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "gallery-2",
+      "src": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1000&q=80",
+      "alt": "点心拼盘",
+      "title": "经典点心",
+      "category": "dim-sum",
+      "description": "手工制作的蒸点与包点。",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "gallery-3",
+      "src": "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1000&q=80",
+      "alt": "餐厅内景",
+      "title": "温馨雅座",
+      "category": "interior",
+      "description": "适合家庭聚会与庆祝。",
+      "featured": false,
+      "order": 3
+    }
+  ],
+  "gallerySection": {
+    "badge": "美食画廊",
+    "title": "视觉盛宴",
+    "subtitle": "正宗中式烹饪艺术",
+    "cta": { "text": "查看全部画廊", "link": "/gallery" },
+    "scrollImages": [
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80",
+      "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80",
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80",
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+      "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80",
+      "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80",
+      "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80",
+      "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80",
+      "https://images.unsplash.com/photo-1617093727343-374698b1b08d?w=600&q=80",
+      "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80",
+      "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600&q=80",
+      "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600&q=80",
+      "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=600&q=80",
+      "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=600&q=80",
+      "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80",
+      "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=600&q=80",
+      "https://images.unsplash.com/photo-1612927601601-6638404737ce?w=600&q=80"
+    ]
+  },
+  "reviewsSection": {
+    "badge": "顾客评价",
+    "title": "宾客怎么说",
+    "subtitle": "地道风味，难忘体验",
+    "reviews": [
+      {
+        "name": "Sarah Chen",
+        "rating": 5,
+        "text": "纽约最好吃的点心！味道非常正宗，小笼包简直完美。"
+      },
+      {
+        "name": "Michael Wong",
+        "rating": 5,
+        "text": "我们家来这里已经十年了，出品稳定，分量足，服务好。"
+      },
+      {
+        "name": "Emily Rodriguez",
+        "rating": 5,
+        "text": "北京烤鸭太棒了！需要提前预订，但绝对值得。"
+      },
+      {
+        "name": "David Kim",
+        "rating": 5,
+        "text": "地道中式风味，陈伟大厨手艺一流，菜品都很新鲜。"
+      }
+    ]
+  },
+  "chefSection": {
+    "badge": "主厨团队",
+    "name": "Chef Chen Wei",
+    "nameLocal": "陈伟大厨",
+    "image": "/chinese-chef-fine-dining.png",
+    "description": "拥有三十多年厨艺经验的陈伟大厨，将北京风味带到纽约。他擅长传统中式烹饪技法，传承家族秘方。",
+    "descriptionSecondary": "每一道菜都精雕细琢，讲究味道与口感的平衡，带来难忘的用餐体验。",
+    "stats": [
+      { "icon": "Award", "label": "30+ 年经验" },
+      { "icon": "Trophy", "label": "获奖主厨" }
+    ]
+  },
+  "environmentSection": {
+    "badge": "餐厅环境",
+    "title": "优雅氛围",
+    "titleLocal": "优雅环境",
+    "subtitle": "传统与现代舒适融合的空间",
+    "photos": [
+      {
+        "src": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+        "alt": "典雅餐厅",
+        "title": "优雅用餐",
+        "titleLocal": "优雅用餐"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80",
+        "alt": "私人包厢",
+        "title": "私人包厢",
+        "titleLocal": "私人包厢"
+      },
+      {
+        "src": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80",
+        "alt": "酒吧服务",
+        "title": "酒吧服务",
+        "titleLocal": "酒吧服务"
+      }
+    ],
+    "features": [
+      { "icon": "🏮", "title": "传统装饰", "desc": "中式雅致与现代舒适兼具" },
+      { "icon": "👨‍👩‍👧‍👦", "title": "家庭友好", "desc": "适合聚会与庆祝" },
+      { "icon": "🍽️", "title": "全方位服务", "desc": "堂食、外带、外送与宴会" }
+    ]
+  },
+  "cta": {
+    "title": "与金龙阁一起庆祝",
+    "description": "立即订位或规划您的宴席菜单。",
+    "primaryCta": { "text": "立即订位", "link": "/reservations" },
+    "secondaryCta": { "text": "查看菜单", "link": "/menu" }
+  },
+  "finalCta": {
+    "title": "体验地道中式美食",
+    "description": "立即订位，感受金龙阁三十余年的经典风味。",
+    "primaryCta": { "text": "立即订位", "link": "/reservations" },
+    "secondaryCta": { "text": "致电：(555) 888-8888", "link": "tel:+15558888888" },
+    "address": "88 Dragon Street, New York, NY 10002"
+  },
+  "posts": [
+    {
+      "title": "五味平衡的中式美学",
+      "excerpt": "酸甜苦辣咸如何在我们的招牌菜中协调统一。",
+      "image": "https://images.unsplash.com/photo-1525755662778-989d0524087e?w=1000&q=80"
+    },
+    {
+      "title": "点心传统与现代工艺",
+      "excerpt": "从竹笼蒸点到创新摆盘，感受点心之美。",
+      "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1000&q=80"
+    }
+  ]
+}

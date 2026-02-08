@@ -1,0 +1,16 @@
+{
+  "sites": [
+    {
+      "id": "golden-dragon",
+      "name": "Golden Dragon",
+      "domain": "goldendragon.com",
+      "enabled": true,
+      "defaultLocale": "en",
+      "supportedLocales": ["en", "zh"],
+      "locales": ["en", "zh"],
+      "domains": ["goldendragon.com", "www.goldendragon.com", "localhost:3000"],
+      "createdAt": "2026-02-01T00:00:00Z",
+      "updatedAt": "2026-02-01T00:00:00Z"
+    }
+  ]
+}

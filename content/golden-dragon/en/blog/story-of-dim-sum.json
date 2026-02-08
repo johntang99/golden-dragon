@@ -1,0 +1,15 @@
+{
+  "id": "2",
+  "slug": "story-of-dim-sum",
+  "title": "Dim Sum: The Heart-Touching Tradition",
+  "titleChinese": "点心：触动心灵的传统",
+  "category": "Recipe History",
+  "excerpt": "Discover how dim sum evolved from tea house snacks to a beloved culinary art form.",
+  "content": "Dim sum, which means \"touch the heart\"...",
+  "author": "Chef Chen Wei",
+  "date": "2024-12-10",
+  "readTime": "6 min read",
+  "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80",
+  "type": "article",
+  "tags": ["Dim Sum", "History", "Tea Culture"]
+}
